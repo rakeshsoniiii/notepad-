@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Productivity Suite</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap">
+  <link rel="stylesheet" href="gpt_Style.css">
+</head>
+<body>
+  <div class="app-container">
+    <header>
+      <h1>Productivity Suite</h1>
+      <div class="header-actions">
+        <button id="themeToggleBtn" class="theme-toggle-btn">🌙</button>
+      </div>
+    </header>
+
+    <main class="main-content">
+      <!-- Notes Section -->
+      <section class="app-section">
+        <div class="section-header">
+          <h2>Quick Notes</h2>
+          <button class="add-btn" onclick="openNoteDialog()">+ Add Note</button>
+        </div>
+        <div id="notesContainer" class="notes-grid"></div>
+      </section>
+
+      <!-- Todo Section -->
+      <section class="app-section">
+        <div class="section-header">
+          <h2>To-Do List</h2>
+        </div>
+        <div class="todo-app">
+          <div class="row">
+            <input type="text" id="todo-input" placeholder="Add a new task...">
+            <button id="add-todo-btn">Add</button>
+          </div>
+          <ul id="todo-list"></ul>
+        </div>
+      </section>
+    </main>
+
+    <!-- Note Dialog -->
+    <dialog id="noteDialog">
+      <div class="dialog-content">
+        <div class="dialog-header">
+          <h2 class="dialog-title">Add New Note</h2>
+          <button class="close-btn" onclick="closeNoteDialog()">×</button>
+        </div>
+        <form id="noteForm">
+          <div class="form-group">
+            <label for="noteTitle">Title</label>
+            <input type="text" id="noteTitle" placeholder="Enter note title..." required>
+          </div>
+          <div class="form-group">
+            <label for="noteContent">Content</label>
+            <textarea id="noteContent" placeholder="Write your note here..." required></textarea>
+          </div>
+          <div class="dialog-actions">
+            <button type="button" class="cancel-btn" onclick="closeNoteDialog()">Cancel</button>
+            <button type="submit" class="save-btn">Save Note</button>
+          </div>
+        </form>
+      </div>
+    </dialog>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

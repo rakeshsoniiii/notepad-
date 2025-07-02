@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Basic Meta Tags -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Productivity Suite</title>
+  
+  <!-- External Resources -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap">
+  <link rel="stylesheet" href="new.css">
+</head>
+<body>
+  <!-- Main App Container -->
+  <div class="app-container">
+    <!-- Header Section -->
+    <header>
+      <h1>Productivity Suite</h1>
+      <div class="header-actions">
+        <!-- Search Bar -->
+        <div class="search-container">
+          <input type="text" id="search-input" placeholder="Search notes and tasks...">
+          <button id="search-btn">🔍</button>
+        </div>
+        <!-- Theme Toggle -->
+        <button id="themeToggleBtn" class="theme-toggle-btn">🌙</button>
+      </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="main-content">
+      <!-- Notes Section -->
+      <section class="app-section">
+        <div class="section-header">
+          <h2>Quick Notes</h2>
+          <button class="add-btn" onclick="openNoteDialog()">+ Add Note</button>
+        </div>
+        <!-- Notes Grid Container -->
+        <div id="notesContainer" class="notes-grid"></div>
+      </section>
+
+      <!-- Todo Section -->
+      <section class="app-section">
+        <div class="section-header">
+          <h2>To-Do List</h2>
+        </div>
+        <div class="todo-app">
+          <!-- Todo Input Area -->
+          <div class="row">
+            <input type="text" id="todo-input" placeholder="Add a new task...">
+            <button id="add-todo-btn">Add</button>
+          </div>
+          <!-- Todo List -->
+          <ul id="todo-list"></ul>
+        </div>
+      </section>
+    </main>
+
+    <!-- Note Dialog (Hidden by default) -->
+    <dialog id="noteDialog">
+      <div class="dialog-content">
+        <div class="dialog-header">
+          <h2 class="dialog-title">Add New Note</h2>
+          <button class="close-btn" onclick="closeNoteDialog()">×</button>
+        </div>
+        <!-- Note Form -->
+        <form id="noteForm">
+          <div class="form-group">
+            <label for="noteTitle">Title</label>
+            <input type="text" id="noteTitle" placeholder="Enter note title..." required>
+          </div>
+          <div class="form-group">
+            <label for="noteContent">Content</label>
+            <textarea id="noteContent" placeholder="Write your note here..." required></textarea>
+          </div>
+          <div class="dialog-actions">
+            <button type="button" class="cancel-btn" onclick="closeNoteDialog()">Cancel</button>
+            <button type="submit" class="save-btn">Save Note</button>
+          </div>
+        </form>
+      </div>
+    </dialog>
+  </div>
+
+  <!-- JavaScript File -->
+  <script src="app.js"></script>
+</body>
+</html>

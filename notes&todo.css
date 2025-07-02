@@ -1,0 +1,248 @@
+:root {
+  --brand-color: #6c63ff;
+  --accent-color: #ff6584;
+  --base-color: #f8f9fa;
+  --surface-color: #ffffff;
+  --text-color: #2d3748;
+  --secondary-text: #4a5568;
+  --border-color: #e2e8f0;
+}
+
+.dark-theme {
+  --brand-color: #8b90ff;
+  --accent-color: #ff6584;
+  --base-color: #1a202c;
+  --surface-color: #2d3748;
+  --text-color: #f7fafc;
+  --secondary-text: #cbd5e0;
+  --border-color: #4a5568;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: var(--base-color);
+  color: var(--text-color);
+  transition: all 0.3s ease;
+}
+
+.app-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.main-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.app-section {
+  background: var(--surface-color);
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+/* Notes Section Styles */
+.notes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.note-card {
+  background: var(--surface-color);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 1rem;
+  transition: transform 0.2s;
+}
+
+.note-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Todo Section Styles */
+.todo-app {
+  width: 100%;
+}
+
+.row {
+  display: flex;
+  background: var(--surface-color);
+  border-radius: 30px;
+  padding-left: 20px;
+  margin-bottom: 1.5rem;
+  border: 1px solid var(--border-color);
+}
+
+#todo-input {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  padding: 12px;
+  color: var(--text-color);
+}
+
+#add-todo-btn {
+  border: none;
+  outline: none;
+  padding: 12px 30px;
+  background: var(--brand-color);
+  color: white;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+#add-todo-btn:hover {
+  background: #5a52e0;
+}
+
+#todo-list {
+  list-style: none;
+}
+
+#todo-list li {
+  padding: 12px 8px 12px 40px;
+  position: relative;
+  border-bottom: 1px solid var(--border-color);
+  cursor: pointer;
+}
+
+#todo-list li::before {
+  content: '';
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  border: 2px solid var(--brand-color);
+  left: 8px;
+  top: 10px;
+}
+
+#todo-list li.checked {
+  color: var(--secondary-text);
+  text-decoration: line-through;
+}
+
+#todo-list li.checked::before {
+  background-color: var(--brand-color);
+}
+
+/* Shared Component Styles */
+.add-btn,
+.theme-toggle-btn {
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.add-btn {
+  background: var(--brand-color);
+  color: white;
+  border: none;
+}
+
+.theme-toggle-btn {
+  background: var(--surface-color);
+  color: var(--text-color);
+  border: 1px solid var(--border-color);
+}
+
+/* Dialog Styles */
+dialog {
+  border: none;
+  border-radius: 12px;
+  padding: 0;
+  background: var(--surface-color);
+  color: var(--text-color);
+  width: 90%;
+  max-width: 500px;
+}
+
+.dialog-content {
+  padding: 1.5rem;
+}
+
+.dialog-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: var(--text-color);
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  background: var(--base-color);
+  color: var(--text-color);
+}
+
+.dialog-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.cancel-btn,
+.save-btn {
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.cancel-btn {
+  background: var(--base-color);
+  color: var(--text-color);
+  border: 1px solid var(--border-color);
+}
+
+.save-btn {
+  background: var(--brand-color);
+  color: white;
+  border: none;
+}
+
+@media (max-width: 768px) {
+  .main-content {
+    grid-template-columns: 1fr;
+  }
+}

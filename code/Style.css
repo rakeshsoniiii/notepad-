@@ -1,0 +1,319 @@
+/* CSS Variables for Theme Management */
+:root {
+  /* Light Theme Colors */
+  --brand-color: #6c63ff;       /* Primary brand color */
+  --accent-color: #ff6584;      /* Secondary accent color */
+  --base-color: #f8f9fa;        /* Background color */
+  --surface-color: #ffffff;     /* Card/surface color */
+  --text-color: #2d3748;        /* Primary text color */
+  --secondary-text: #4a5568;    /* Secondary text color */
+  --border-color: #e2e8f0;      /* Border color */
+  --search-bg: #ffffff;         /* Search bar background */
+}
+
+/* Dark Theme Colors */
+.dark-theme {
+  --brand-color: #8b90ff;
+  --accent-color: #ff6584;
+  --base-color: #1a202c;
+  --surface-color: #2d3748;
+  --text-color: #f7fafc;
+  --secondary-text: #cbd5e0;
+  --border-color: #4a5568;
+  --search-bg: #2d3748;
+}
+
+/* Base Reset and Typography */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: var(--base-color);
+  color: var(--text-color);
+  transition: all 0.3s ease; /* Smooth theme transition */
+}
+
+/* Main App Layout */
+.app-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* Header Styles */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* Search Bar Styles */
+.search-container {
+  display: flex;
+  background: var(--search-bg);
+  border-radius: 30px;
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--border-color);
+}
+
+#search-input {
+  border: none;
+  background: transparent;
+  outline: none;
+  color: var(--text-color);
+  min-width: 200px;
+}
+
+#search-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--text-color);
+}
+
+/* Main Content Grid Layout */
+.main-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+/* Shared Section Styles */
+.app-section {
+  background: var(--surface-color);
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+/* Notes Section Specific Styles */
+.notes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.note-card {
+  background: var(--surface-color);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 1rem;
+  transition: transform 0.2s;
+}
+
+.note-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Todo Section Specific Styles */
+.todo-app {
+  width: 100%;
+}
+
+.row {
+  display: flex;
+  background: var(--surface-color);
+  border-radius: 30px;
+  padding-left: 20px;
+  margin-bottom: 1.5rem;
+  border: 1px solid var(--border-color);
+}
+
+#todo-input {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  padding: 12px;
+  color: var(--text-color);
+}
+
+#add-todo-btn {
+  border: none;
+  outline: none;
+  padding: 12px 30px;
+  background: var(--brand-color);
+  color: white;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+#add-todo-btn:hover {
+  background: #5a52e0;
+}
+
+#todo-list {
+  list-style: none;
+}
+
+#todo-list li {
+  padding: 12px 8px 12px 40px;
+  position: relative;
+  border-bottom: 1px solid var(--border-color);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+#todo-list li:hover {
+  background: rgba(0, 0, 0, 0.03);
+}
+
+#todo-list li::before {
+  content: '';
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  border: 2px solid var(--brand-color);
+  left: 8px;
+  top: 10px;
+}
+
+#todo-list li.checked {
+  color: var(--secondary-text);
+  text-decoration: line-through;
+}
+
+#todo-list li.checked::before {
+  background-color: var(--brand-color);
+}
+
+/* Shared Component Styles */
+.add-btn, .theme-toggle-btn {
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.add-btn {
+  background: var(--brand-color);
+  color: white;
+  border: none;
+}
+
+.add-btn:hover {
+  opacity: 0.9;
+}
+
+.theme-toggle-btn {
+  background: var(--surface-color);
+  color: var(--text-color);
+  border: 1px solid var(--border-color);
+}
+
+/* Dialog (Modal) Styles */
+dialog {
+  border: none;
+  border-radius: 12px;
+  padding: 0;
+  background: var(--surface-color);
+  color: var(--text-color);
+  width: 90%;
+  max-width: 500px;
+}
+
+.dialog-content {
+  padding: 1.5rem;
+}
+
+.dialog-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+
+/* Form Styles */
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: var(--text-color);
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  background: var(--base-color);
+  color: var(--text-color);
+}
+
+/* Button Styles */
+.dialog-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.cancel-btn, .save-btn {
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.cancel-btn {
+  background: var(--base-color);
+  color: var(--text-color);
+  border: 1px solid var(--border-color);
+}
+
+.save-btn {
+  background: var(--brand-color);
+  color: white;
+  border: none;
+}
+
+.save-btn:hover {
+  opacity: 0.9;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .main-content {
+    grid-template-columns: 1fr;
+  }
+  
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .header-actions {
+    width: 100%;
+    justify-content: space-between;
+  }
+  
+  .search-container {
+    flex-grow: 1;
+  }
+}

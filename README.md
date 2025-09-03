@@ -22,6 +22,7 @@
 
 ---
 
+
 ### **🚀 Phase 2 (Advanced AI & Productivity)**  
 **1. Smarter Automation**  
 - **Meeting Notes AI** (Transcribe + extract action items)  

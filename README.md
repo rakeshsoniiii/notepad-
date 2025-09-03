@@ -1,7 +1,3 @@
-Here’s a **structured and prioritized roadmap** for your AI-powered note-taking app, combining all your ideas into actionable categories with a focus on **MVP (Minimum Viable Product)** and **advanced AI integrations**:
-
----
-
 ### **📌 Core MVP (Must-Have Features)**  
 **1. Smart Note-Taking Basics**  
 - Rich text formatting (bold, italics, bullet points, headings)  

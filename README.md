@@ -20,7 +20,9 @@
 - Offline mode (local storage)  
 - Cloud sync (Google Drive/iCloud)  
 
----
+-----
+
+
 
 
 ### **🚀 Phase 2 (Advanced AI & Productivity)**  

@@ -41,7 +41,7 @@
 - **Note Linking** (AI suggests related notes)  
 - **Topic Clustering** (Auto-group "Project X" notes)  
 
----
+------
 
 ### **🔥 Phase 3 (Next-Level AI & Unique Features)**  
 **1. Personal AI Assistant**  

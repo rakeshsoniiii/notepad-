@@ -80,4 +80,4 @@
 2. **Use existing APIs** (OpenAI, Gemini, or Whisper for voice) to save dev time.  
 3. **Target a niche** (Students? Professionals? Creatives?) to differentiate.  
 
-Would you like a **UI wireframe sketch** or **tech stack recommendations** (e.g., Flutter for cross-platform, Firebase for sync)? Let me know how deep you want to dive! 🛠️
+

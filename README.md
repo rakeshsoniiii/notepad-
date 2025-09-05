@@ -20,7 +20,7 @@
 - Offline mode (local storage)  
 - Cloud sync (Google Drive/iCloud)  
 
--------
+------------
 
 
 

@@ -66,7 +66,7 @@
 - **Privacy-First AI** (On-device processing for sensitive data)  
 - **Multi-App Integration** (Slack, Trello, Notion APIs)  
 
----
+---------
 
 ### **🎯 Potential Names**  
 - **ClarityNote** (Focus on AI-driven clarity)  
